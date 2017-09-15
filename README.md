@@ -46,6 +46,15 @@ In the above command, note the following:
 'hosts' : Ansible inventory file (required)
 'launch_ec2_nodes.yml': Playbook 
  COUNT : Param in the Playbook. Specify the number of EC2 nodes required for the MapR Cluster
- NAME  : Param in the Playbook. Tag for your resources. 
+ NAME  : Param in the Playbook. Tag for your resources.
+
+##### Deleting your nodes
+
+After you are done with your testing, you need to delete them via your AWS Console. 
+
+NOTE: There is a bug in the AMI, the 2nd data disk (EBS Volume) was not set to terminate automatically.
+After deleting your instances in the EC2 Console UI, go to EC2 Console -> Volumes and delete the Volumes
+that are tagged as "Available" (it means they are not connected to any instance).
+
 
 
