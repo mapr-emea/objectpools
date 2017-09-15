@@ -40,7 +40,7 @@ Step 1:
 * There are additional variables, parameters like COUNT, NAME, that you will be overriding on the cmd line.
 * Run the playbook like this:
 
-$ ansible-playbook -i ./hosts ./launch_ec2_nodes.yml --extra-vars "COUNT=5 NAME=rajesh-citi-objpool2"
+$ ansible-playbook -i ./hosts ./launch_ec2_nodes.yml --extra-vars "COUNT=5 NAME=rajesh-objpool2-testing"
 
 In the above command, note the following:
 'hosts' : Ansible inventory file (required)
