@@ -3,13 +3,13 @@
   connection: local  
   gather_facts: no    
   vars:  
-    region: us-west-2  
+    region: us-west-2         
     instance_type: m4.4xlarge    
-    image: ami-6ffe1c17    
+    image: ami-6ffe1c17    # use Chad's AMI for your region. Ref: https://drive.google.com/file/d/0B5rTQrCFLTYrMmZDNldtZzlMdXM/view
     key: rajeshr-se-aws-us-west-2  
     subnet_id: subnet-5e5a1906
     sec_grp_id: sg-0e469975
-    nodes_inventory : "ec2_nodes_list"
+    nodes_inventory : "ec2_nodes_list" # don't change
     #terminate_inventory: "ec2_terminate_list"
   tasks:  
     - name: launching 'COUNT' number of ec2 nodes (with tags required for SE-VPC)
